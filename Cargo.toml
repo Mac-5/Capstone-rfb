@@ -1,0 +1,23 @@
+[package]
+name = "rfb_wallet"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.104"
+argon2 = "0.6.0"
+base64 = "0.22.1"
+bdk_bitcoind_rpc = "0.22.0"
+bdk_esplora = { version = "0.22.2", default-features = false, features = ["blocking", "blocking-https"] }
+bdk_wallet = { version = "3.2.0", features = ["keys-bip39", "rusqlite"] }
+bitcoin = { version = "0.32.102", features = ["base64"] }
+bitcoincore-rpc = "0.19.0"
+chacha20poly1305 = "0.11.0"
+clap = { version = "4.6.7", features = ["derive"] }
+dirs = "7.0.0"
+getrandom = "0.4.3"
+ratatui = "0.30.2"
+
+[dev-dependencies]
+bitcoind = "0.42.0"
+tempfile = "3.27.0"
